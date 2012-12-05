@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1811" systemVersion="12C60" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Hashtag" representedClassName="Hashtag" syncable="YES">
+        <attribute name="length" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="tag" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="inPost" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Post" inverseName="hashtags" inverseEntity="Post" syncable="YES"/>
+    </entity>
+    <entity name="Link" representedClassName="Link" syncable="YES">
+        <attribute name="length" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="link" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="inPost" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Post" inverseName="links" inverseEntity="Post" syncable="YES"/>
+    </entity>
+    <entity name="Mention" representedClassName="Mention" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="length" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="inPost" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Post" inverseName="mentions" inverseEntity="Post" syncable="YES"/>
+    </entity>
+    <entity name="Post" representedClassName="Post" syncable="YES">
+        <attribute name="created_at" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="height298" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="replies_count" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="repost_count" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="stars_count" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="thread_id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <relationship name="hashtags" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Hashtag" inverseName="inPost" inverseEntity="Hashtag" syncable="YES"/>
+        <relationship name="inStream" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Stream" inverseName="post" inverseEntity="Stream" syncable="YES"/>
+        <relationship name="links" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Link" inverseName="inPost" inverseEntity="Link" syncable="YES"/>
+        <relationship name="mentions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Mention" inverseName="inPost" inverseEntity="Mention" syncable="YES"/>
+        <relationship name="posted_by" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="author" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="Stream" representedClassName="Stream" syncable="YES">
+        <attribute name="identifier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="refreshedAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="seenPostDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="post" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Post" inverseName="inStream" inverseEntity="Post" syncable="YES"/>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES">
+        <attribute name="bio" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="coverPictureURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="follower_count" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="following_count" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="followingHim" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="followsMe" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="fullname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="joined_date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="muted" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="posts_count" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="profilePictureURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="author" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Post" inverseName="posted_by" inverseEntity="Post" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Hashtag" positionX="-12015" positionY="-4774" width="128" height="103"/>
+        <element name="Link" positionX="-12017" positionY="-5265" width="128" height="103"/>
+        <element name="Mention" positionX="-12015" positionY="-4915" width="128" height="103"/>
+        <element name="Post" positionX="-12294" positionY="-5083" width="128" height="238"/>
+        <element name="Stream" positionX="-12564" positionY="-4986" width="128" height="118"/>
+        <element name="User" positionX="-12017" positionY="-5173" width="128" height="253"/>
+    </elements>
+</model>

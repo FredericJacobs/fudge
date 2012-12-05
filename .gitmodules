@@ -1,0 +1,12 @@
+[submodule "Libraries/DTCoreText"]
+	path = Libraries/DTCoreText
+	url = git://github.com/Cocoanetics/DTCoreText.git
+[submodule "Libraries/CloudApp"]
+	path = Libraries/CloudApp
+	url = git://github.com/cloudapp/objective-c.git
+[submodule "Libraries/AppNetKit"]
+	path = Libraries/AppNetKit
+	url = git://github.com/brentdax/appnetkit.git
+[submodule "Libraries/SDWebImage"]
+	path = Libraries/SDWebImage
+	url = git://github.com/rs/SDWebImage.git
