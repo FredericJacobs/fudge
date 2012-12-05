@@ -7,7 +7,7 @@ An early stage App.net iPhone client I had to discontinue because I don't have e
 
 I unfortunately will have to discontinue it's development because I'm severely lacking time here. I'm glad I realized this before putting it into production. 
 
-![Fudge](http://f.cl.ly/items/0N1G1I3n1F0N2M1t2d0I/dsfadff.png)
+![Fudge](http://f.cl.ly/items/0w3y0r1F2x1P0j3f1Z2z/fdasfsadfas800.png)
 
 ### What works 
 
@@ -21,7 +21,7 @@ I unfortunately will have to discontinue it's development because I'm severely l
 - Kick ass design
 - CoreData post persistence, ready for autocompletion of posts
 
-![Fudge](http://f.cl.ly/items/3K3l2c3F1G433F2L1k0H/fasdsf.png)
+![Fudge](http://f.cl.ly/items/0S0J2E3f3X47120U0H3u/fasdsf800.png)
 
 ### What's really missing 
 
