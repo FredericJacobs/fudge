@@ -1,7 +1,7 @@
 fudge - The App.net Client
 =====
 
-An early stage App.net iPhone client I had to discontinue because I don't have enough time to put it into production and assume everything that goes with that (maintenant, support ...)
+An early stage App.net iPhone client I had to discontinue because I don't have enough time to put it into production and assume everything that goes with that (maintenance, support ...)
 
 ![Fudge Logo](http://f.cl.ly/items/3f0k2Z3X1R3z453D4509/fudge-icon-dribbble@2x.png)
 
