@@ -32,3 +32,7 @@ I unfortunately will have to discontinue it's development because I'm severely l
 ### Contact 
 
 If you're interested to know more about this project you can always drop me a line or ping me on Twitter/App.net.
+
+### Credits
+
+Fudge was a collaboration with the inimitable [Tim Van Damme](http://timvandamme.com/) who beautifully designed the client and Fudge's personality.
